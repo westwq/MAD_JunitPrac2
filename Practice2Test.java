@@ -1,3 +1,4 @@
+import org.junit.Test;
 
 public class UserTest{
     private User user;
@@ -13,7 +14,7 @@ public class UserTest{
 
     @Test
     public void testUser(){
-        
+        assertEquals("testDes", user.description);
     }
 
 }
