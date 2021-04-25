@@ -15,6 +15,9 @@ public class UserTest{
         user.id = 123;
         user.followed = true;
         assertEquals("testDes", user.description);
+        assertEquals("test", user.name);
+        assertEquals(123, user.id);
+        assertEquals(true, user.followed);
     }
 
 }
