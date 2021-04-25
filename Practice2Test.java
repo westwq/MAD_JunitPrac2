@@ -1,4 +1,8 @@
+package sg.edu.np.mad.madpractical;
+
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class UserTest{
     private User user;
