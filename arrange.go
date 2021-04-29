@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"path/filepath"
@@ -38,4 +39,21 @@ func main() {
 	}
 	realPath := absPath[:len(absPath)-20]
 	fmt.Println(realPath)
+
+	from, err := os.Open("./testDirectory/Practice2Test.java")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer from.Close()
+
+	to, err := os.OpenFile(realPath+"UserTest.java", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer to.Close()
+
+	_, err = io.Copy(to, from)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
