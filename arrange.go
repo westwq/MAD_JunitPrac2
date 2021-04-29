@@ -36,5 +36,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(absPath)
+	realPath := absPath[:len(absPath)-20]
+	fmt.Println(realPath)
 }
