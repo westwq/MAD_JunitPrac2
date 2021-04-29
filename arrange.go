@@ -32,7 +32,7 @@ func findFileAbsPath(basepath, filename string) (string, error) {
 func main() {
 	// usage example.
 	var err error
-	absPath, err = findFileAbsPath(".", "ExampleUnitTest.java")
+	absPath, err = findFileAbsPath("app", "ExampleUnitTest.java")
 	if err != nil {
 		log.Fatal(err)
 	}
