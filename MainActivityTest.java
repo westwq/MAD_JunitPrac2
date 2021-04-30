@@ -27,11 +27,12 @@ public class MainActivityTest {
     @Test
     public void pressImageView(){
         onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
-        onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
-
-
     }
 
+    @Test
+    public void pressImageView(){
+        onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
+    }
     @After
     public void tearDown() throws Exception {
     }
