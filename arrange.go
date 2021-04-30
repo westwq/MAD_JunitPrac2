@@ -33,6 +33,30 @@ func findFileAbsPath(basepath, filename string) (string, error) {
 func main() {
 	// usage example.
 	var err error
+	absPath, err = findFileAbsPath("../app", "ExampleInstrumentedTest.java")
+	if err != nil {
+		log.Fatal(err)
+	}
+	realPathAnd := absPath[:len(absPath)-28]
+	fmt.Println(realPathAnd)
+
+	fromAnd, err := os.Open("../testDirectory/MainActivityTest.java")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer fromAnd.Close()
+
+	toAnd, err := os.OpenFile(realPathAnd+"MainActivityTest.java", os.O_RDWR|os.O_CREATE, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer toAnd.Close()
+
+	_, err = io.Copy(toAnd, fromAnd)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	absPath, err = findFileAbsPath("../app", "ExampleUnitTest.java")
 	if err != nil {
 		log.Fatal(err)
