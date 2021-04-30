@@ -30,7 +30,7 @@ public class MainActivityTest {
     }
 
     @Test
-    public void pressImageView(){
+    public void pressText(){
         onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
     }
     @After
