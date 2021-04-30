@@ -14,22 +14,15 @@ import org.junit.runners.JUnit4;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static org.junit.Assert.*;
+
 @RunWith(JUnit4.class)
 public class MainActivityTest {
     @Rule
     public ActivityScenarioRule<MainActivity> activityRule = new ActivityScenarioRule<>(MainActivity.class);
-
-
-    @Before
-    public void setUp() throws Exception {
-    }
 
     @Test
     public void pressImageView(){
         onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
     }
 
-    @After
-    public void tearDown() throws Exception {
-    }
 }
