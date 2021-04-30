@@ -29,10 +29,6 @@ public class MainActivityTest {
         onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
     }
 
-    @Test
-    public void pressText(){
-        onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
-    }
     @After
     public void tearDown() throws Exception {
     }
