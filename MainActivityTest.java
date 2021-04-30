@@ -26,7 +26,7 @@ public class MainActivityTest {
 
     @Test
     public void pressImageView(){
-        onView(ViewMatchers.withId(R.id.btnFollow)).perform(click());
+        onView(ViewMatchers.withId(R.id.btnFollow1)).perform(click());
 
 
     }
