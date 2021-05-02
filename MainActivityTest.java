@@ -20,10 +20,10 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 @RunWith(AndroidJUnit4.class)
 
 public class MainActivityTest {
-    private final static String TAG = "Test Script";
+
     @Rule
-    public ActivityScenarioRule<MainActivity> activityRule
-            = new ActivityScenarioRule<>(MainActivity.class);
+    public ActivityScenarioRule<MainActivity> activityRule =
+            new ActivityScenarioRule<MainActivity>(MainActivity.class);
 
     @Before
     public void setUp() throws Exception {
