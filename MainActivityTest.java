@@ -32,6 +32,7 @@ public class MainActivityTest {
     @Test
     public void changeText_sameActivity() {
         // Type text and then press the button.
+        ActivityScenario scenario = rule.getScenario();
         onView(withId(R.id.btnFollow)).perform(click());
         onView(withId(R.id.btnFollow)).check(matches(isDisplayed()));
     }
