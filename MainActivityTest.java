@@ -32,17 +32,7 @@ public class MainActivityTest {
 
     }
 
-    @Test
-    public void changeText_sameActivity() {
-        // Type text and then press the button
-        onView(withId(R.id.btnFollow)).perform(click());
-        onView(withId(R.id.btnFollow)).perform(click());
-        onView(withId(R.id.btnFollow)).perform(click());
-        onView(withId(R.id.btnFollow)).perform(click());
-        onView(withId(R.id.btnFollow)).perform(click());
-        onView(withId(R.id.btnFollow)).check(matches(isDisplayed()));
-    }
-    
+
     @After
     public void tearDown() throws Exception {
     }
