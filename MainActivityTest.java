@@ -1,5 +1,6 @@
 package sg.edu.np.mad.madpractical;
 
+import android.content.Intent;
 import android.util.Log;
 
 import org.junit.After;
@@ -23,18 +24,23 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 public class MainActivityTest {
     private final static String TAG = "Test Script";
     @Rule
-    public ActivityScenarioRule rule =
+    public ActivityScenarioRule<MainActivity> activityRule =
             new ActivityScenarioRule<>(MainActivity.class);
     @Before
     public void setUp() throws Exception {
+        ActivityScenario.launch(MainActivity.class);
+
     }
 
     @Test
     public void changeText_sameActivity() {
-        // Type text and then press the button.
-        ActivityScenario scenario = rule.getScenario();
- //       onView(withId(R.id.btnFollow)).perform(click());
-  //      onView(withId(R.id.btnFollow)).check(matches(isDisplayed()));
+        // Type text and then press the button
+        onView(withId(R.id.btnFollow)).perform(click());
+        onView(withId(R.id.btnFollow)).perform(click());
+        onView(withId(R.id.btnFollow)).perform(click());
+        onView(withId(R.id.btnFollow)).perform(click());
+        onView(withId(R.id.btnFollow)).perform(click());
+        onView(withId(R.id.btnFollow)).check(matches(isDisplayed()));
     }
     
     @After
